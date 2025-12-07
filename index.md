@@ -1,5 +1,6 @@
 ---
-Justice Rose
+title: "Justice Rose"
+layout: default
 ---
 
 ## About Me
