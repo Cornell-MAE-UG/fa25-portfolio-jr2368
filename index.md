@@ -19,5 +19,5 @@ You can view my resume [here](https://github.com/user-attachments/files/23490979
 
 ### Projects
 
-- [Aircraft Pitch Controller](aircraft-pitch-controller)
+- [Aircraft Pitch Controller](/aircraft-pitch-controller)
 
