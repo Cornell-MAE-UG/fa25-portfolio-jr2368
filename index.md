@@ -19,5 +19,5 @@ You can view my resume [here](https://github.com/user-attachments/files/23490979
 
 ### Projects
 <!-- open in new tab (remember rel="noopener noreferrer" for security) -->
-<a href="/fa25-portfolio--jr2368/aircraft-pitch-controller" target="_blank" rel="noopener noreferrer">Aircraft Pitch Controller</a>
+<a href="/fa25-portfolio-jr2368/aircraft-pitch-controller" target="_blank" rel="noopener noreferrer">Aircraft Pitch Controller</a>
 
