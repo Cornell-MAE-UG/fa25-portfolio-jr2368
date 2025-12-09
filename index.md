@@ -18,6 +18,6 @@ I am driven by the belief that meaningful impact comes from purpose, preparation
 You can view my resume [here](https://github.com/user-attachments/files/23490979/My.Resume.pdf).
 
 ### Projects
-
-- [Aircraft Pitch Controller](/aircraft-pitch-controller)
+<!-- open in new tab (remember rel="noopener noreferrer" for security) -->
+<a href="/aircraft-pitch-controller.html" target="_blank" rel="noopener noreferrer">Aircraft Pitch Controller</a>
 
