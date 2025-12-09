@@ -1,28 +1,30 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-
+# ------------------------------------
 # Site Settings
-locale                   : "en-US"
-title                    : Justice Rose
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : Justice Rose
-description              : Justice Rose - Projects and CV 
-baseurl                  : "/fa25-portfolio--jr2368" # Set this to your repo name 
+# ------------------------------------
+locale           : "en-US"
+title            : "Justice Rose"
+title_separator  : "-"
+subtitle         : ""
+name             : "Justice Rose"
+description      : "Justice Rose - Projects and CV"
+baseurl          : "/fa25-portfolio--jr2368"   # Your repo name
+url              : "https://yourusername.github.io"  # update if needed
 
-# Theme and Style
-theme: jekyll-theme-minimal
-color_scheme: light # light/default, dark, or aqua
+# ------------------------------------
+# Theme (DISABLED so custom theme is used)
+# ------------------------------------
+theme: null
+color_scheme: light
 
+# ------------------------------------
+# SASS / CSS
+# ------------------------------------
 sass:
   style: compressed
 
-# Outputting
+# ------------------------------------
+# Output Structure
+# ------------------------------------
 permalink: /:categories/:title/
 
 collections:
@@ -32,14 +34,29 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# Markdown
+# ------------------------------------
+# Markdown Settings
+# ------------------------------------
 markdown: kramdown
 kramdown:
   input: GFM
 
-# Plugins (previously gems:)
+# ------------------------------------
+# Plugins
+# ------------------------------------
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
+
+# ------------------------------------
+# Navigation (Used by your custom layout)
+# ------------------------------------
+nav:
+  - name: "Home"
+    link: "/fa25-portfolio--jr2368/"
+  - name: "Projects"
+    link: "/fa25-portfolio--jr2368/projects"
+  - name: "Resume"
+    link: "https://github.com/user-attachments/files/23490979/My.Resume.pdf"
 
