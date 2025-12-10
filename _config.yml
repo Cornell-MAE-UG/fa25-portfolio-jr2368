@@ -1,31 +1,21 @@
-# ------------------------------------
-# Site Settings
-# ------------------------------------
 title: "Justice Rose"
 name: "Justice Rose"
 description: "Portfolio, Projects, and CV"
 locale: "en-US"
 
-# MUST match your GitHub repo EXACTLY
+# MUST match repo name EXACTLY
 baseurl: "/fa25-portfolio-jr2368"
-url: "https://yourusername.github.io"   # replace with your GitHub username when ready
+url: "https://yourusername.github.io"
 
-# ------------------------------------
-# Theme (Disabled - using custom layouts)
-# ------------------------------------
 theme: null
 color_scheme: light
 
-# ------------------------------------
-# SASS / CSS
-# ------------------------------------
 sass:
   style: compressed
 
-# ------------------------------------
-# Permalink Structure
-# ------------------------------------
-permalink: /:categories/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # ------------------------------------
 # Collections
@@ -36,22 +26,21 @@ collections:
     permalink: /projects/:name/
 
 # ------------------------------------
-# Markdown Settings
+# Make _pages work
 # ------------------------------------
-markdown: kramdown
-kramdown:
-  input: GFM
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: default
 
-# ------------------------------------
-# Plugins
-# ------------------------------------
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
 
 # ------------------------------------
-# Navigation (Used by your default layout)
+# Navigation
 # ------------------------------------
 nav:
   - name: "Home"
