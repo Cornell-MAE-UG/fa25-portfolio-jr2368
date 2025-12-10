@@ -1,51 +1,48 @@
+# ------------------------------------
+# Site Settings
+# ------------------------------------
+locale: "en-US"
 title: "Justice Rose"
+title_separator: "-"
+subtitle:
 name: "Justice Rose"
 description: "Portfolio, Projects, and CV"
-locale: "en-US"
 
-# MUST match repo name EXACTLY
-baseurl: "/fa25-portfolio-jr2368"
-url: "https://yourusername.github.io"
+# Must match repo name exactly
+baseurl: "fa25-portfolio-jr2368"
 
-theme: null
+# ------------------------------------
+# Theme (REQUIRED for GitHub Classroom)
+# ------------------------------------
+theme: jekyll-theme-minimal
 color_scheme: light
 
 sass:
   style: compressed
 
+# ------------------------------------
+# Output Structure
+# ------------------------------------
+permalink: /:categories/:title/
+
+collections:
+  pages:
+    output: true
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+# ------------------------------------
+# Markdown Settings
+# ------------------------------------
 markdown: kramdown
 kramdown:
   input: GFM
 
 # ------------------------------------
-# Collections
+# Plugins
 # ------------------------------------
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-
-# ------------------------------------
-# Make _pages work
-# ------------------------------------
-defaults:
-  - scope:
-      path: "_pages"
-    values:
-      layout: default
-
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
-
-# ------------------------------------
-# Navigation
-# ------------------------------------
-nav:
-  - name: "Home"
-    link: "{{ site.baseurl }}/"
-  - name: "Projects"
-    link: "{{ site.baseurl }}/projects/"
-  - name: "Resume"
-    link: "{{ site.baseurl }}/cv/"
