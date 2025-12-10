@@ -1,74 +1,83 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Justice Rose – Curriculum Vitae
 permalink: /cv/
 ---
-## Curriculum Vitae
 
-[Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
+# Curriculum Vitae
 
+<div class="mb-4">
+  <a class="btn btn-primary" href="{{ '/assets/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-file-earmark-arrow-down"></i> Download CV (PDF)
+  </a>
+</div>
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
-
----
-
-#### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
-
----
-
-#### Education
-- **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
-
-- **[High School Name]**  
-  *High School Diploma*  
-  Graduation: [Month, Year]
+**Email:** [justicerose@domain.com](mailto:justicerose@domain.com)  
+**Phone:** (XXX) XXX-XXXX  
 
 ---
 
-#### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
-- **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
+## Objective
+Emerging mechanical engineer with a strong technical foundation and a demonstrated commitment to leadership, operational excellence, and mission-focused performance. Motivated by opportunities where engineering, applied problem-solving, and disciplined teamwork intersect.
 
 ---
 
-#### Projects
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+## Education
 
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+### **[University Name]**
+**Bachelor of Science in Mechanical Engineering**  
+Expected Graduation: [Month Year]  
+Relevant Coursework: Dynamics, Materials, Systems Engineering, Heat Transfer, Controls
 
----
-
-#### Work Experience
-- **[Company Name] - Intern**  
-  [Month, Year] - [Month, Year]  
-  - Responsibility 1  
-  - Responsibility 2  
+### **[High School Name]**
+Diploma Awarded: [Month Year]
 
 ---
 
-#### Achievements & Certifications
-- [Certification Name], [Issuing Organization], [Year]  
-- [Achievement Name], [Competition/Event], [Year]  
+## Skills
+
+**Engineering Software:** SolidWorks, Autodesk Fusion 360, ANSYS  
+**Programming:** MATLAB, Python  
+**Technical Tools:** 3D Printing, Laser Cutting, CNC Tools  
+**Professional Skills:** Technical Writing, Leadership, Project Management
 
 ---
 
-#### Extracurricular Activities
-- Member of [Club/Organization Name]  
-- Volunteer for [Event/Organization Name]  
+## Projects
+
+### **[Project Title]**
+*Brief description of what the project accomplished and the problem being solved.*
+- Result or achievement 1  
+- Result or achievement 2  
+
+### **[Project Title]**
+*Brief description here.*  
+- Key takeaway or contribution  
+- Technical highlight  
 
 ---
 
-#### References
+## Experience
+
+### **[Company or Lab Name] — Intern**
+*Location* | [Month Year] – [Month Year]  
+- Led or contributed to activity X  
+- Designed, built, or analyzed Y  
+- Supported testing, documentation, or modeling activities  
+
+---
+
+## Certifications & Achievements
+- Certification Name — Issuing Organization, Year  
+- Award or Achievement — Competition/Event, Year  
+
+---
+
+## Extracurricular Involvement
+- Member, **[Club or Organization]**  
+- Volunteer, **[Program or Community Effort]**  
+
+---
+
+## References
 Available upon request.
-
----
