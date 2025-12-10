@@ -1,0 +1,16 @@
+---
+layout: project
+title: 747-700 Aircraft Pitch Controller
+description: Advanced CAD Project
+technologies: [Autodesk Fusion]
+image: /assets/images/radio-machine-cad.jpg
+---
+
+---
+title: "Aircraft Pitch Controller"
+layout: default
+---
+
+## Aircraft Pitch Controller
+
+For my System Dynamics class, MAE 3260, I, alongside Nicholas Schneider, Kat Volkova, and Lea Staller, designed performance requirements of a Boeing 747-400 aircraft for pitch control, and built a Simulink model with a Proportional-Integral-Derivative (PID) controller.
