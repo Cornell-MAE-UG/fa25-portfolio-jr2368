@@ -1,0 +1,20 @@
+---
+layout: project
+title: "Aircraft Pitch Controller"
+description: "PID Control Model for Boeing 747 Pitch Dynamics"
+technologies: [MATLAB, Simulink, Control Theory]
+image: /assets/images/aircraft-pitch-controller.png
+---
+
+# Aircraft Pitch Controller
+
+For my System Dynamics class (MAE 3260), I collaborated with Nicholas Schneider, Kat Volkova, and Lea Staller to model and control the pitch dynamics of a Boeing 747-400 aircraft. Our objective was to design a feedback control system capable of maintaining pitch stability under dynamic flight conditions.
+
+## Project Goals
+- Derive longitudinal aircraft dynamics  
+- Build a linearized model for controller development  
+- Implement and tune a PID controller  
+- Run step-response and disturbance simulations  
+
+## Summary
+This project strengthened my understanding of stability, feedback control, system identification, and real-world aircraft dynamics. Through iterative tuning and simulation in Simulink, we developed a controller with predictable response characteristics and robust pitch stabilization.
