@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,43 +13,65 @@
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 </head>
 
-<body>
+<body class="bg-light">
 
   <!-- NAVIGATION BAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark text-white">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2f3545;">
+      <div class="container">
+
+        <!-- Site Title -->
+        <a class="navbar-brand fw-semibold" href="{{ "/" | relative_url }}">
+          {{ site.title }}
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
-        </button>  
+        </button>
+
+        <!-- Navigation Items -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+
             <li class="nav-item">
-              <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
+              <a class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active fw-bold{% endif %}"
+                 href="{{ "/" | relative_url }}">
+                Home
+              </a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link {% if page.url == '/cv/' %}active{% endif %}" href="{{ "/cv/" | relative_url }}">CV</a>
+              <a class="nav-link {% if page.url contains 'projects' %}active fw-bold{% endif %}"
+                 href="{{ "/projects/" | relative_url }}">
+                Projects
+              </a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains 'cv' %}active fw-bold{% endif %}"
+                 href="{{ "/cv/" | relative_url }}">
+                CV
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  
-  <!-- HERO BANNER (only appears if defined in page front matter) -->
+
+  <!-- OPTIONAL HERO BANNER -->
   {% if page.banner %}
-  <section class="hero-banner text-center text-white d-flex align-items-center justify-content-center">
-    <div class="hero-content">
-      <h1>{{ page.banner.title }}</h1>
+  <section class="hero-banner text-center text-white d-flex align-items-center justify-content-center"
+           style="background:#3b4355; padding:80px 0;">
+    <div>
+      <h1 class="fw-bold">{{ page.banner.title }}</h1>
       <p class="lead">{{ page.banner.subtitle }}</p>
 
       {% if page.banner.button_text %}
-      <a href="{{ page.banner.button_link }}" class="btn btn-lg hero-btn">
+      <a href="{{ page.banner.button_link }}" class="btn btn-light btn-lg mt-3">
         {{ page.banner.button_text }}
       </a>
       {% endif %}
@@ -59,19 +81,19 @@
 
 
   <!-- MAIN CONTENT -->
-  <main class="container py-4">
+  <main class="container py-5">
     {{ content }}
   </main>
 
 
   <!-- FOOTER -->
-  <footer class="footer navbar-dark text-white text-center py-3">
+  <footer class="text-center text-white py-3" style="background-color:#2f3545;">
     <div class="container">
-      &copy; 2024 {{ site.name }}. All rights not reserved.
+      &copy; {{ site.time | date: "%Y" }} {{ site.title }} — All Rights Reserved.
     </div>
   </footer>
 
-  
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
