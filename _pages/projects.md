@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Justice Rose – Projects
+title: Projects
 permalink: /projects/
 ---
 
@@ -17,7 +17,7 @@ permalink: /projects/
 /* Project Grid Layout */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -31,6 +31,9 @@ permalink: /projects/
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -38,24 +41,28 @@ permalink: /projects/
   box-shadow: 0 10px 18px rgba(0,0,0,0.15);
 }
 
-/* Image styling */
+/* Uniform Image Styling */
 .project-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 220px;         /* Force uniform image height */
+  object-fit: cover;     /* Ensures images scale/crop nicely */
+  background: #f2f2f2;
 }
 
-/* Project Title */
+/* Title Styling */
 .project-card-title {
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 0.75rem 1rem 1rem 1rem;
+  padding: 1rem;
+  flex-grow: 1;
 }
 </style>
+
 
 <h1 class="projects-title">Projects</h1>
 
 <div class="project-grid">
+
   {% for project in site.projects %}
     <a href="{{ project.url | relative_url }}" class="project-card">
       
@@ -65,7 +72,11 @@ permalink: /projects/
       <img src="https://via.placeholder.com/600x400?text=No+Image" alt="Placeholder">
       {% endif %}
       
-      <div class="project-card-title">{{ project.title }}</div>
+      <div class="project-card-title">
+        {{ project.title }}
+      </div>
+
     </a>
   {% endfor %}
+
 </div>
