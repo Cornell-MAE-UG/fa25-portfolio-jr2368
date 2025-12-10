@@ -2,14 +2,37 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="container">
 
-<p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+  <!-- Project Title -->
+  <h1 class="mb-4">{{ page.title }}</h1>
 
-{{ content }}
+  <!-- Project Image (optional + responsive) -->
+  {% if page.image %}
+  <div class="text-center mb-4">
+      <img src="{{ page.image | relative_url }}"
+           alt="{{ page.imagealt }}"
+           class="img-fluid rounded shadow-sm"
+           style="max-width: 80%; height: auto;">
+  </div>
+  {% endif %}
 
-<p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
+  <!-- Project Content -->
+  <div class="project-body mb-4">
+    {{ content }}
+  </div>
 
-<a href={{ "/projects/" | relative_url }} class="back-arrow">
-    <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
-</a>
+  <!-- Technologies Used -->
+  {% if page.technologies %}
+  <p class="fw-semibold">
+    <span style="color:#2f3545;">Technologies Used:</span>
+    <span class="text-muted">{{ page.technologies | join: ", " }}</span>
+  </p>
+  {% endif %}
+
+  <!-- Back Button -->
+  <a href="{{ "/projects/" | relative_url }}" class="btn btn-outline-primary mt-3">
+      <i class="bi bi-arrow-left-circle"></i> Back to Projects
+  </a>
+
+</div>
