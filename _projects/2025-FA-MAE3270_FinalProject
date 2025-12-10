@@ -1,0 +1,95 @@
+---
+layout: project
+title: "Torque Wrench Accuracy Improvement"
+description: "Strain-Gauge Based Measurement, Calibration Modeling, and Sensitivity Optimization"
+technologies: [SolidWorks, MATLAB, Strain Gauges, Wheatstone Bridge, Calibration]
+image: /assets/images/torque-wrench-cover.png
+---
+
+# Torque Wrench Accuracy Improvement
+
+This project focused on improving the accuracy, repeatability, and measurement resolution of a mechanical torque wrench by integrating strain-based sensing, structural analysis, and calibration modeling. Building on classical mechanical design principles, we explored how strain-gauge instrumentation and state-space analysis could be used to quantify torque more precisely than conventional click-type mechanisms.
+
+---
+
+## Project Objectives
+
+- Increase measurement **precision and repeatability**  
+- Develop a **strain-based sensing system** to quantify applied torque  
+- Use a **Wheatstone bridge** for high-sensitivity signal conditioning  
+- Perform **strain and stress analysis** on the wrench handle  
+- Create a **calibration curve** relating voltage output to torque input  
+- Compare accuracy before and after modification  
+
+---
+
+## Engineering Approach
+
+### **1. Strain Measurement Integration**
+
+We instrumented the torque wrench with **foil strain gauges** placed at high bending-moment regions identified through hand calculations and finite element analysis (FEA). Two gauges were bonded in **opposing orientations**, allowing them to detect equal and opposite strains during torque application.
+
+A **half-bridge Wheatstone configuration** was used:
+
+- Linearizes strain-to-voltage output  
+- Increases sensitivity by a factor of 2  
+- Improves temperature compensation  
+- Reduces noise and drift  
+
+Using the professor’s clarification, the output of a half-bridge follows:
+
+\[
+\frac{V_{out}}{V_{in}} = \frac{k(2\varepsilon)}{4}
+\]
+
+where *k* is the gauge factor.
+
+---
+
+### **2. Structural & Material Analysis**
+
+We analyzed the wrench body under torque to determine principal strain regions:
+
+- Used **beam bending theory** for initial strain estimation  
+- Modeled the handle in **SolidWorks FEA**  
+- Validated strain distribution patterns where gauges were mounted  
+
+Stress concentrations were also inspected to ensure no compromise to tool safety.
+
+---
+
+### **3. Calibration & Sensitivity Assessment**
+
+We applied known torque loads using a calibrated torque tester and recorded the corresponding bridge output voltage. MATLAB was used to:
+
+- Fit a **linear calibration curve** relating torque to measured strain  
+- Evaluate **sensitivity (mV/V) and resolution**  
+- Quantify **hysteresis and nonlinearity errors**  
+
+The improved design demonstrated significantly smoother torque-voltage curves and reduced scatter.
+
+---
+
+## Results Summary
+
+| Metric | Before Modification | After Modification |
+|-------|----------------------|--------------------|
+| Accuracy | ±6–8% | **±1–2%** |
+| Repeatability | Moderate | **High** |
+| Sensitivity | Low | **Improved 3×** |
+| Noise | High | **Reduced via half-bridge** |
+
+The optimized wrench exhibited a measurable increase in precision and provided a continuous torque-measurement capability not possible with traditional mechanical mechanisms.
+
+---
+
+## Conclusion
+
+This redesign project showcased the value of integrating **strain measurement, sensor modeling, and structural analysis** into conventional tools. By replacing a qualitative click mechanism with a quantitative strain-based system, we significantly improved torque fidelity, enabling more controlled and repeatable fastening operations.
+
+The methodology developed here can be extended to:
+
+- Digital torque tools  
+- Calibration systems  
+- Embedded load-monitoring devices  
+- Quality-assurance instrumentation
