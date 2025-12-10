@@ -6,9 +6,9 @@ name: "Justice Rose"
 description: "Portfolio, Projects, and CV"
 locale: "en-US"
 
-# Your GitHub repo name (MUST MATCH EXACTLY)
+# MUST match your GitHub repo EXACTLY
 baseurl: "/fa25-portfolio-jr2368"
-url: "https://yourusername.github.io"   # Replace with your actual username later
+url: "https://yourusername.github.io"   # replace with your GitHub username when ready
 
 # ------------------------------------
 # Theme (Disabled - using custom layouts)
@@ -51,7 +51,7 @@ plugins:
   - jekyll-seo-tag
 
 # ------------------------------------
-# Navigation (Used in default.html)
+# Navigation (Used by your default layout)
 # ------------------------------------
 nav:
   - name: "Home"
