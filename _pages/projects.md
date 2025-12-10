@@ -1,34 +1,22 @@
 ---
-title: "Projects"
+layout: default
+title: Justice Rose - Portfolio
 permalink: /projects/
 ---
 
-# Projects
+<h1>Projects</h1>
 
-<div class="container my-4">
-  <div class="row g-4">
-
+<div class="gallery-container">
+<div class="project-gallery">
     {% for project in site.projects %}
-      <div class="col-12 col-sm-6 col-lg-4">
-
-        <a href="{{ project.url | relative_url }}" class="text-decoration-none text-dark">
-
-          <div class="card h-100 shadow-sm">
-
-            {% if project.image %}
-            <img src="{{ project.image | relative_url }}" class="card-img-top" alt="{{ project.title }}">
-            {% endif %}
-
-            <div class="card-body">
-              <h5 class="card-title">{{ project.title }}</h5>
-            </div>
-
-          </div>
-
+      <div class="gallery-item">
+        <a href="{{ project.url | relative_url }}">
+          {% if project.image %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+          {% endif %}
+          <p>{{ project.title }}</p>
         </a>
-
       </div>
     {% endfor %}
-
-  </div>
+</div>
 </div>
