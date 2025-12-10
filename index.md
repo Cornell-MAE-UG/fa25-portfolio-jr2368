@@ -5,19 +5,30 @@ layout: default
 
 ## About Me
 
-<img src="https://github.com/user-attachments/assets/a4993111-3bc9-42a8-b63f-2e1d2b78c1b2" alt="Rose_Headshot" width="250"/>
+<div style="display: flex; align-items: flex-start; gap: 20px; max-width: 900px;">
 
-My name is Justice Rose, and I am a third-year mechanical engineering student with a strong commitment to innovation, operational excellence, and mission-driven leadership. I am deeply interested in the automotive manufacturing sector, particularly in how advanced engineering practices, modern automation, and sustainable production methods are shaping the future of the industry.  
+  <img src="https://github.com/user-attachments/assets/a4993111-3bc9-42a8-b63f-2e1d2b78c1b2"
+       alt="Rose_Headshot"
+       style="width: 220px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);" />
 
-I grew up in Yokosuka, Japan, where my father served in the U.S. Navy. Being raised in a diverse, international community instilled in me an appreciation for service, discipline, and cultural awareness. Those early experiences shaped my perspective on teamwork, global engagement, and contributing to something larger than myself.
+  <div style="font-size: 1.05rem; line-height: 1.6;">
 
-Beyond academics, I am an active member of Naval ROTC and will be commissioning as a Surface Warfare Officer. Through this journey, I have developed a disciplined work ethic, a service-oriented mindset, and a strong appreciation for collaborative, high-performance environments. I am motivated by opportunities where engineering, leadership, and strategic problem-solving intersect, and I continually seek experiences that broaden my technical foundation and strengthen my ability to serve others.
+My name is **Justice Rose**, and I am a third-year Mechanical Engineering student with a strong focus on innovation, operational excellence, and mission-driven leadership. My academic and professional interests center on advanced manufacturing, automation, and sustainable production methods within the automotive engineering sector.
 
-I am driven by the belief that meaningful impact comes from purpose, preparation, and perseverance—and I look forward to contributing to organizations and teams that share these values.
+I grew up in Yokosuka, Japan, where my father served in the U.S. Navy. Being raised in an international community shaped my appreciation for service, discipline, and cross-cultural collaboration. These experiences continue to influence how I approach teamwork, technical problem-solving, and leadership.
 
-You can view my resume [here](https://github.com/user-attachments/files/23490979/My.Resume.pdf).
+Beyond academics, I serve in **Naval ROTC** and will commission as a **Surface Warfare Officer**. This journey has strengthened my discipline, strategic mindset, and commitment to high-performance environments. I am inspired by roles where engineering, leadership, and operational strategy intersect.
 
-### Projects
-<!-- open in new tab (remember rel="noopener noreferrer" for security) -->
-<a href=Aircraft-Pitch-Controller target="_blank" rel="noopener noreferrer">Aircraft Pitch Controller</a>
+You can view my résumé  
+➡️ **[Resume (PDF)](https://github.com/user-attachments/files/23490979/My.Resume.pdf)**
 
+  </div>
+</div>
+
+---
+
+## Projects
+
+<a href="/Aircraft-Pitch-Controller" target="_blank" rel="noopener noreferrer">
+  Aircraft Pitch Controller
+</a>
