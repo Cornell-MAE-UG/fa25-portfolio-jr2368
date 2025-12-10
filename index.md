@@ -27,7 +27,7 @@
     <p class="mt-3">
       <a class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer"
          href="https://github.com/user-attachments/files/23490979/My.Resume.pdf">
-         <i class="bi bi-file-earmark-text"></i> View Résumé (PDF)
+         <i class="bi bi-file-earmark-text"></i> View Resume (PDF)
       </a>
     </p>
   </div>
