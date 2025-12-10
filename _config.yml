@@ -44,9 +44,8 @@ plugins:
 # ------------------------------------
 nav:
   - name: "Home"
-    link: "/fa25-portfolio-jr2368/"
+    link: "{{ site.baseurl }}/"
   - name: "Projects"
-    link: "/fa25-portfolio-jr2368/projects/"
+    link: "{{ site.baseurl }}/projects/"
   - name: "Resume"
-    link: "/fa25-portfolio-jr2368/cv/"
-
+    link: "{{ site.baseurl }}/cv/"
