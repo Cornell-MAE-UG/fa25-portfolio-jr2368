@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Projects"
 permalink: /projects/
 ---
@@ -22,11 +21,6 @@ permalink: /projects/
 
             <div class="card-body">
               <h5 class="card-title">{{ project.title }}</h5>
-              {% if project.subtitle %}
-                <p class="card-text text-muted" style="font-size:0.9rem;">
-                  {{ project.subtitle }}
-                </p>
-              {% endif %}
             </div>
 
           </div>
@@ -37,4 +31,4 @@ permalink: /projects/
     {% endfor %}
 
   </div>
-</div>>
+</div>
