@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Justice Rose – Projects
+title: "Projects"
 permalink: /projects/
 ---
 
@@ -15,7 +15,7 @@ permalink: /projects/
         <a href="{{ project.url | relative_url }}" class="text-decoration-none text-dark">
 
           <div class="card h-100 shadow-sm">
-            
+
             {% if project.image %}
             <img src="{{ project.image | relative_url }}" class="card-img-top" alt="{{ project.title }}">
             {% endif %}
@@ -37,4 +37,4 @@ permalink: /projects/
     {% endfor %}
 
   </div>
-</div>
+</div>>
