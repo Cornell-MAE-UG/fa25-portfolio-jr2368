@@ -7,7 +7,7 @@ title_separator  : "-"
 subtitle         : ""
 name             : "Justice Rose"
 description      : "Justice Rose - Projects and CV"
-baseurl          : "/fa25-portfolio--jr2368"   # Your repo name
+baseurl          : "/fa25-portfolio-jr2368"   # Your repo name
 url              : "https://yourusername.github.io"  # update if needed
 
 # ------------------------------------
