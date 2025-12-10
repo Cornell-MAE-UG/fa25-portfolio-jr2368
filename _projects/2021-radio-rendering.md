@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Aircraft Pitch Controller
+title: 747-700 Aircraft Pitch Controller
 description: Advanced CAD Project
 technologies: [Autodesk Fusion]
 image: /assets/images/radio-machine-cad.jpg
