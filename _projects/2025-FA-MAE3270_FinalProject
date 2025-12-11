@@ -98,7 +98,7 @@ This material provided favorable fatigue resistance and toughness while enabling
 <tbody>
 <tr><td>Maximum Normal Stress</td><td>133.75 ksi</td></tr>
 <tr><td>Load-Point Deflection</td><td>0.38077 in</td></tr>
-<tr><td>Gauge-Location Strains (x, y, z)</td><td>−0.3059, −0.30605, 1.055 millistrain</td></tr>
+<tr><td>Gauge-Location Strains (x, y, z)</td><td>[−0.3059, −0.30605, 1.055] millistrain</td></tr>
 </tbody>
 </table>
 
