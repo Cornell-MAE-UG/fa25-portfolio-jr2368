@@ -149,7 +149,7 @@ highlighting the need for closed-loop compensation.
 <h2>Controller Design and PID Tuning</h2>
 
 <div align="center" class="mb-4">
-  <img src="{{ '/assets/images/pitch-controller-cover.png' | relative_url }}"
+  <img src="{{ '/assets/images/aircraft-flight-control.png' | relative_url }}"
        alt="Pitch Controller Simulation Overview"
        class="img-fluid rounded shadow-sm"
        style="max-width: 85%; height: auto;">
@@ -200,7 +200,7 @@ The complete technical report—including equations, aircraft parameters, modeli
 results—is available below.
 </p>
 
-<a class="btn btn-primary" href="/assets/reports/MAE3260_FinalGroupReport.pdf" download>
+<a class="btn btn-primary" href="/assets/MAE3260_FinalGroupReport.pdf" download>
     Download Report (PDF)
 </a>
 
