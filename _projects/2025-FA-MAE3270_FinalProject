@@ -51,18 +51,28 @@ The baseline design is structurally sound but does not meet the sensitivity requ
 
 ## Improved Final Design
 
-The updated geometry focuses on:
+The updated torque-wrench geometry was developed to increase strain at the gauge location while maintaining structural integrity across all safety margins. The redesign alters the cross-section, removes excess material in low-stress regions, and introduces controlled flexibility at the reduced section.
 
-- Introducing a reduced cross-section to amplify strain  
-- Preserving yield, fatigue, and fracture safety margins  
-- Providing flat surfaces for strain-gauge bonding  
-- Ensuring smooth, predictable strain gradients  
+### Key Dimension Changes (Baseline → Final)
+- Reduced-section thickness: **0.60 in → 0.40 in**  
+- Reduced-section width: **0.50 in → 0.38 in**  
+- Gauge pad length: **0.50 in → 0.75 in** (to improve bonding surface and strain uniformity)  
+- Fillet radius near transition: **0.10 in → 0.25 in** (to reduce stress concentration factors)  
+- Handle length: **18.0 in → 18.5 in** (added length increases bending strain by ~3–4%)  
+
+These changes were all validated analytically and through ANSYS simulation to ensure that stresses remain below allowable limits while strain increases sufficiently to meet the 1.0 mV/V sensitivity requirement.
+
+### Design Objectives Achieved
+- Increased strain magnitude at the gauge by over **2.8×**  
+- Improved gauge placement surface quality and curvature  
+- Maintained required safety factors for yield, fatigue, and fracture  
+- Ensured a smooth strain gradient through the reduced section for accurate instrumentation
 
 <div align="center">
-  <img src="{{ '/assets/images/torque-wrench-cover.png' | relative_url }}"
-       alt="Reduced section detail"
-       style="max-width:70%; border-radius:8px;">
-  <p><em>Refined reduced-section geometry for improved strain measurement.</em></p>
+<img src="{{ '/assets/images/torque-wrench-cover.png' | relative_url }}"
+     alt="Improved torque wrench CAD geometry"
+     style="max-width:90%; border-radius:8px;">
+<p><em>Updated CAD geometry with reduced section and improved gauge-mount region.</em></p>
 </div>
 
 <div align="center">
