@@ -3,7 +3,7 @@ layout: project
 title: MAE 3260 – Aircraft Pitch Controller Design
 description: State-space modeling, transfer-function development, and PID controller implementation for a Boeing-class aircraft
 technologies: [MATLAB, Simulink, Control Theory, State-Space Modeling, PID Control]
-image: /assets/images/pitch-controller-cover.png
+image: /assets/images/aircraft-flight-control.png
 ---
 
 <div class="section">
@@ -200,7 +200,7 @@ The complete technical report—including equations, aircraft parameters, modeli
 results—is available below.
 </p>
 
-<a class="btn btn-primary" href="/assets/MAE3260_FinalGroupReport.pdf" download>
+<a class="btn btn-primary" href="/assetsMAE3260 Final Group Report.pdf" download>
     Download Report (PDF)
 </a>
 
