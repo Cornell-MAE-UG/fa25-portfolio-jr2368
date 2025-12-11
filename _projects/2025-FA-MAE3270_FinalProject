@@ -1,121 +1,130 @@
 ---
 layout: project
-title: MAE 3270 – Torque Wrench Design and Analysis
-description: Full-system mechanical design, strain-gauge instrumentation, and FEM validation
+title: "MAE 3270 – Torque Wrench Design and Analysis"
+description: "Full-system mechanical design, strain-gauge instrumentation, and FEM validation"
 technologies: [Autodesk Fusion, ANSYS, MATLAB, Strain Gauge Instrumentation]
 image: /assets/images/torque-wrench-cover.png
 ---
+
 ## Overview
-This project summarizes the design workflow for an **instrumented 3/8-inch drive torque wrench** rated for **600 in·lbf**. It integrates **hand calculations**, **material selection**, **CAD modeling**, **strain-gauge configuration**, and **finite element analysis (FEM)**.  
+
+This project summarizes the design workflow for an **instrumented 3/8-inch drive torque wrench** rated for **600 in·lbf**.  
+It integrates **hand calculations**, **material selection**, **CAD modeling**, **strain-gauge configuration**, and **finite element analysis (FEM)**.
 
 The objective was to design a wrench that:
 
 - Achieves **≥ 1.0 mV/V** strain-gauge output at full torque  
-- Satisfies safety factors for:
-  - Yield/brittle failure (**X₀ ≥ 4**)
+- Satisfies required safety factors:  
+  - Yield/brittle failure (**X₀ ≥ 4**)  
   - Crack-growth tolerance (**Xₖ ≥ 2**)  
   - Fatigue (**Xₛ ≥ 1.5**, fully reversed)
-- Meets manufacturability constraints and supports bonded gauges
+- Supports standard bonded foil gauges
 - Produces consistent strain fields suitable for a half-bridge Wheatstone circuit
 
 ---
+
 ## Baseline Analysis
-Using the baseline dimensions provided by my professor, the following results were obtained:
+
+Using the baseline dimensions provided by my professor, the following results were obtained.
 
 ### **Hand-Calculation Highlights**
+
 - Load-point deflection: **0.091 in**  
 - Max bending stress: **12.8 ksi**  
 - Strain at gauge: **375 µε**  
 - Expected output (half-bridge): **0.38 mV/V**  
 - Safety factors:  
-  - Static strength: **28.9**  
-  - Crack growth: **2.95**  
-  - Fatigue: **8.98**
+  - Static strength: **28.9×**  
+  - Crack growth: **2.95×**  
+  - Fatigue: **8.98×**
 
-These results show that the baseline design is *structurally adequate* but **fails the sensitivity requirement** (≥1.0 mV/V).
+These results show that the baseline design is *structurally adequate* but **fails the sensitivity requirement** (≥ 1.0 mV/V).
 
 ---
 
 ## Improved Final Design
 
-The final redesigned wrench geometry was optimized to:
+The redesigned wrench geometry was optimized to:
 
 - Increase strain at the gauge location  
 - Reduce cross-section locally while avoiding stress concentrations  
 - Maintain required safety factors  
-- Provide gauge mounting surfaces with clearances matching standard foil strain gauges
+- Provide flat gauge-mounting surfaces with correct clearances
 
 ### **CAD Model**
 
-(CAD PICTURES)
+*(Insert CAD pictures here)*
 
-**Key Design Dimensions**  
-These dimensions correspond to your Fusion model and FEM refinement:
+**Key Design Dimensions**
 
-- Handle width: 0.8 in  
-- Handle thickness: 0.5 in  
-- Gauge offset distance *c*: 1.0  
-- Reduced section contour to amplify strain while maintaining fatigue safety factor  
+- Handle width: **0.8 in**  
+- Handle thickness: **0.5 in**  
+- Gauge offset distance (*c*): **1.0 in**  
+- Custom reduced section contour for strain amplification  
 
 ---
 
 ## Material Selection
 
-Based on trade-offs in sensitivity, fatigue resistance, and manufacturability, the final material chosen was:
+Based on sensitivity, fatigue resistance, and manufacturability, the final material chosen was:
 
-### **📌 Material: *Your Selected Alloy***  
+### ** Material: Aluminum 7475-T7651**
 
-**Aluminum 7475 T7651**  
-- E = 10e6 psi
-- nu = 0.29 
-- σᵤ ≈ 65 ksi  
-- KIC ≈ 46 ksi√in   
+- \( E = 10 \times 10^6 \, \text{psi} \)  
+- \( \nu = 0.29 \)  
+- \( \sigma_u \approx 65 \, \text{ksi} \)  
+- \( K_{IC} \approx 46 \, \text{ksi}\sqrt{\text{in}} \)
 
-This alloy provided sufficient toughness and fatigue resistance while permitting a narrower reduced section for strain amplification.
+This alloy offered adequate toughness and fatigue resistance while permitting a narrower reduced section for strain amplification.
 
 ---
 
 ## FEM Analysis
 
 The final wrench geometry was imported into **ANSYS**.  
-Boundary conditions followed the schematic: fixed constraint over the **upper 0.40 in of the drive** and torsional loading equivalent to **600 in·lbf**.
+Boundary conditions followed the project specification:
+
+- The upper **0.40 in** of the drive was fixed  
+- A torsional load equivalent to **600 in·lbf** was applied  
 
 ### **FEM Outputs**
 
 #### **1. Normal Strain Contours (Gauge Direction)**  
-FEM strain fields validated that the reduced section increased strain concentration where gauges are bonded without undesirable stress spikes.
+FEM strain fields confirmed that the reduced section increased strain where gauges are bonded and avoided unintended stress concentrations.
 
-#### **2. Maximum Principal Stress Contour**  
-Stresses remained below allowable limits for:
+#### **2. Principal Stress Contour**  
+All principal stresses remained below allowable limits for:
 
 - Yield  
 - Fatigue  
-- Crack-growth tolerance
+- Crack-growth resistance  
 
-#### **3. Load-Point Deflection and Stress Table**
+#### **3. Numerical FEM Results**
+
 | Quantity | FEM Value |
 |---------|-----------|
-| Maximum Normal Stress (anywhere) | 133.75 ksi|
-| Normal Stress at Probe Location |  |
-| Load Point Deflection | 0.38077 in |
-| Strains at Gauge Location [x, y, z] | [-0.3059, -0.30605, 1.055] millistrain |
+| Maximum Normal Stress | 133.75 ksi |
+| Normal Stress at Probe | *(insert value)* |
+| Load-Point Deflection | 0.38077 in |
+| Strains at Gauge \([x, y, z]\) | \([-0.3059,\ -0.30605,\ 1.055]\) millistrain |
 
 ---
 
 ## Sensitivity Calculation (mV/V)
 
-Using the FEM-computed strain in a **half-bridge Wheatstone configuration**, the output was evaluated using the standard approximation:
+Using the FEM-computed strain in a **half-bridge Wheatstone configuration**, the output was evaluated using:
 
 \[
 \frac{V_{out}}{V_{in}} \approx \frac{k(2\varepsilon)}{4}, \quad k = \text{gauge factor}
 \]
 
-**Final Output Sensitivity:**  
+**Final Output Sensitivity**
+
 \[
-\boxed{\text{≥ 1.0 mV/V at 600 in·lbf}}
+\boxed{V_{out}/V_{in} \ge 1.0\ \text{mV/V at 600 in·lbf}}
 \]
 
-This meets the project requirement.
+The optimized wrench **meets the required sensitivity target**.
 
 ---
 
@@ -125,30 +134,30 @@ A suitable commercial gauge was selected:
 
 **Selected Gauge:** Vishay Micro-Measurements linear foil strain gauge  
 **Model:** EA-06-125BZ-350 (350 Ω, GF ≈ 2.05)  
-**Product Link:** [Vishay Micro-Measurements EA-06-125BZ-350](https://www.micro-measurements.com)
-
----
+**Product Link:**  
+[https://www.micro-measurements.com](https://www.micro-measurements.com)
 
 ### Gauge Specifications
 
-| **Gauge Parameter**       | **Value**              |
-|---------------------------|------------------------|
-| Grid Length               | 3.18 mm (0.125 in)     |
-| Grid Width                | 1.57 mm (0.062 in)     |
-| Pattern Type              | Linear                 |
+| **Gauge Parameter** | **Value** |
+|---------------------|-----------|
+| Grid Length         | 3.18 mm (0.125 in) |
+| Grid Width          | 1.57 mm (0.062 in) |
+| Pattern Type        | Linear |
 
-The Vishay EA-06-125BZ-350 strain gauge was selected because its grid dimensions align with the strain levels predicted by the FEM analysis and the available bonding area on the redesigned torque wrench. This gauge provides reliable sensitivity with stable performance in a half-bridge configuration that gives accurate measurements during torque loading.
+The gauge dimensions match the available bonding surface and predicted FEM strain levels, providing stable and accurate performance in a half-bridge configuration.
+
 ---
 
 ## Final Remarks
 
-This project demonstrated the full mechanical design workflow:
+This project demonstrated a complete mechanical design workflow, integrating:
 
-- Analytical modeling    
-- CAD-to-simulation integration  
-- Materials and failure-mode validation  
-- Sensor-driven mechanical design  
+- Analytical modeling  
+- CAD and FEM refinement  
+- Materials and safety-factor validation  
+- Strain-gauge–driven redesign  
 
-The final torque-wrench design satisfies structural requirements **while surpassing the sensitivity target**, improving the original baseline design by more than a factor of two.
+The final torque-wrench design meets all structural requirements **while exceeding the sensitivity target**, improving the baseline design by **more than a factor of two**.
 
 ---
