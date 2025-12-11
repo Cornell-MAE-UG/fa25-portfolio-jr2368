@@ -3,7 +3,7 @@ layout: project
 title: MAE 3270 – Torque Wrench Design and Analysis
 description: Mechanical redesign, strain-gauge instrumentation, and FEM validation
 technologies: [Fusion 360, ANSYS, MATLAB, Strain Gauges]
-image: /assets/images/torque-wrench-deformation.png
+image: /assets/images/torque-wrench-cover.png
 ---
 
 ## Project Overview
