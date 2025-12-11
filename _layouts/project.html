@@ -17,9 +17,9 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Project Content -->
+  <!-- Project Content (Markdown enabled) -->
   <div class="project-body mb-4">
-    {{ content }}
+    {{ content | markdownify }}
   </div>
 
   <!-- Technologies Used -->
