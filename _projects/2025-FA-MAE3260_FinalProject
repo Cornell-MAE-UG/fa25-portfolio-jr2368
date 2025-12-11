@@ -13,7 +13,7 @@ image: /assets/images/aircraft-flight-control.png
 <p>
 This project analyzes and controls the pitch dynamics of a Boeing 747-400 using state-space modeling,
 transfer-function development, and closed-loop PID control. The objective was to create a controller
-capable of achieving high-fidelity pitch tracking with strict performance constraints. The modeling work
+capable of achieving pitch tracking with performance constraints. The modeling work
 used aerodynamic stability derivatives, aircraft geometry, and performance data to generate a dynamic
 representation of pitch behavior.
 </p>
@@ -48,8 +48,8 @@ ensuring a realistic model for pitch dynamics analysis.
 <li>Mass: 300,000 kg</li>
 <li>Planform area: 541.16 m²</li>
 <li>Mean aerodynamic chord: 8.15 m</li>
-<li>Wingspan: 59.63 m</li>
-<li>Pitch inertia \( I_{yy} \): 4.49×10⁷ kg·m²</li>
+<li>Wingspan: 59.63 m²</li>
+<li>Pitch inertia: 4.49×10⁷ kg·m²</li>
 <li>Cruise speed: 250 m/s</li>
 <li>Air density at 35,000 ft: 0.371 kg/m³</li>
 </ul>
