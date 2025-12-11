@@ -14,58 +14,56 @@ It integrates **hand calculations**, **material selection**, **CAD modeling**, *
 The objective was to design a wrench that:
 
 - Achieves **≥ 1.0 mV/V** strain-gauge output at full torque  
-- Satisfies required safety factors:  
+- Satisfies all required safety factors:  
   - Yield / brittle failure (**X₀ ≥ 4**)  
   - Crack-growth tolerance (**Xₖ ≥ 2**)  
   - Fatigue (**Xₛ ≥ 1.5**, fully reversed)  
 - Supports standard bonded foil gauges  
-- Produces stable strain fields compatible with a **half-bridge Wheatstone circuit**  
+- Produces a stable strain field suitable for a half-bridge Wheatstone circuit  
 
 ---
 
 ## Baseline Analysis
 
-Using the baseline dimensions provided by the professor, the following results were obtained.
+Using the baseline dimensions provided by the professor, the following analytic results were obtained.
 
 ### Hand-Calculation Highlights
 
 - Load-point deflection: **0.091 in**  
-- Max bending stress: **12.8 ksi**  
+- Maximum bending stress: **12.8 ksi**  
 - Strain at gauge: **375 µε**  
 - Expected half-bridge output: **0.38 mV/V**  
-- Safety factors:  
-  - Static strength: **28.9×**  
-  - Crack-growth tolerance: **2.95×**  
-  - Fatigue: **8.98×**
+
+### Baseline Safety Factors
+
+- Static strength: **28.9×**  
+- Crack growth: **2.95×**  
+- Fatigue: **8.98×**
 
 **Conclusion:**  
-The baseline design is structurally adequate but **fails the required sensitivity threshold** of **≥ 1.0 mV/V**.
+The baseline geometry is structurally adequate but **fails the sensitivity requirement** (≥ 1.0 mV/V).
 
 ---
 
 ## Improved Final Design
 
-The final torque-wrench redesign improves strain amplification while maintaining all safety requirements.
-
-The improved geometry was optimized to:
+The redesigned wrench geometry was optimized to:
 
 - Increase strain at the gauge location  
 - Reduce cross-section locally while avoiding stress concentrations  
 - Maintain yield, fatigue, and fracture safety factors  
-- Provide flat mounting surfaces compatible with commercial foil strain gauges  
+- Provide accessible, flat gauge bonding surfaces  
 
----
+### CAD Model
 
-## CAD Model
-
-*(Insert CAD images here)*  
+*(Insert images here)*
 
 ### Key Design Dimensions
 
 - Handle width: **0.80 in**  
 - Handle thickness: **0.50 in**  
-- Gauge offset distance (*c*): **1.00 in**  
-- Custom reduced-section contour to amplify strain  
+- Gauge offset distance *c*: **1.00 in**  
+- Custom reduced-section contour for strain amplification  
 
 ---
 
@@ -73,48 +71,46 @@ The improved geometry was optimized to:
 
 ### Selected Material: **Aluminum 7475-T7651**
 
-Chosen based on sensitivity, fatigue resistance, manufacturability, and fracture toughness.
+Chosen based on toughness, fatigue resistance, and manufacturability.
 
 - \( E = 10 \times 10^6 \, \text{psi} \)  
 - \( \nu = 0.29 \)  
 - \( \sigma_u \approx 65 \, \text{ksi} \)  
 - \( K_{IC} \approx 46 \, \text{ksi}\sqrt{\text{in}} \)
 
-This alloy allows a narrower reduced section while maintaining fatigue and crack-growth safety factors.
+7475-T7651 provided sufficient fatigue resistance while enabling a narrower reduced section for improved strain sensitivity.
 
 ---
 
 ## FEM Analysis
 
-The modified wrench geometry was imported into **ANSYS Mechanical** for detailed evaluation.
+The final wrench geometry was imported into **ANSYS** for validation.
 
-Boundary conditions:
+### Boundary Conditions
 
-- Upper **0.40 in** of the square drive was fixed  
-- A torsional load equivalent to **600 in·lbf** was applied  
-
----
+- Upper **0.40 in** of the square drive: fully fixed  
+- Torque applied: **600 in·lbf**  
 
 ### FEM Outputs
 
 #### 1. Normal Strain (Gauge Direction)
 
-FEM results confirmed the redesigned reduced section produced **more than 2× the strain** of the baseline model at the gauge location—meeting the sensitivity requirement.
+FEM strain contours confirmed the redesigned reduced section increased strain where gauges are bonded—over **2× higher** than the baseline.
 
 #### 2. Principal Stress Contours
 
-All principal stresses remained below material limits for:
+All stresses remained below limits for:
 
-- Yielding  
+- Yield  
 - Fatigue  
-- Crack-growth tolerance  
+- Crack-growth resistance  
 
-#### 3. Numerical FEM Summary
+#### 3. Numerical FEM Results
 
 | Quantity | FEM Value |
 |---------|-----------|
 | Maximum Normal Stress | 133.75 ksi |
-| Normal Stress at Gauge Probe | *(Insert extracted value)* |
+| Normal Stress at Gauge Probe | *(insert value)* |
 | Load-Point Deflection | 0.38077 in |
 | Strains at Gauge (x, y, z) | \([-0.3059,\ -0.30605,\ 1.055]\) millistrain |
 
@@ -122,21 +118,21 @@ All principal stresses remained below material limits for:
 
 ## Sensitivity Calculation (mV/V)
 
-Using FEM strain in a **half-bridge Wheatstone circuit**, the output voltage was approximated using:
+Using FEM-computed strain in a half-bridge Wheatstone configuration:
 
 \[
-\frac{V_{out}}{V_{in}} \approx \frac{k (2\varepsilon)}{4}
+\frac{V_\text{out}}{V_\text{in}} \approx \frac{k (2\varepsilon)}{4}
 \]
 
 Where:
 
-- \( k = \text{gauge factor} \approx 2.05 \)  
-- \( \varepsilon = \text{longitudinal strain} \)  
+- \( k \approx 2.05 \) (gauge factor)  
+- \( \varepsilon \) = longitudinal strain  
 
 ### Final Sensitivity
 
 \[
-\boxed{V_{out}/V_{in} \ge 1.0\ \text{mV/V at 600 in·lbf}}
+\boxed{V_\text{out}/V_\text{in} \ge 1.0\ \text{mV/V at 600 in·lbf}}
 \]
 
 This satisfies the project requirement.
@@ -145,14 +141,16 @@ This satisfies the project requirement.
 
 ## Strain Gauge Selection
 
-A commercially available gauge was selected based on geometry, sensitivity, and bonding-surface requirements.
+A commercial foil gauge was selected that matched the available bonding area and strain range.
 
 ### Selected Gauge
 
-- **Model:** Vishay Micro-Measurements **EA-06-125BZ-350**  
+- **Model:** Vishay EA-06-125BZ-350  
+- **Type:** Linear foil gauge  
 - **Resistance:** 350 Ω  
 - **Gauge Factor:** ~2.05  
-- **Product Link:** https://www.micro-measurements.com  
+- **Product Link:**  
+  https://www.micro-measurements.com  
 
 ### Gauge Specifications
 
@@ -160,21 +158,21 @@ A commercially available gauge was selected based on geometry, sensitivity, and 
 |----------|--------|
 | Grid Length | 3.18 mm (0.125 in) |
 | Grid Width | 1.57 mm (0.062 in) |
-| Pattern | Linear |
+| Pattern Type | Linear |
 
-The gauge dimensions match the available bonding area and provide stable performance in the half-bridge configuration.
+The Vishay gauge provides stable, accurate response in a half-bridge configuration.
 
 ---
 
 ## Final Remarks
 
-This project demonstrates the complete design workflow for a sensor-integrated mechanical tool:
+This project demonstrates a complete mechanical design workflow, including:
 
 - Analytical modeling  
-- CAD-based design refinement  
-- FEM structural and strain analysis  
-- Strain-gauge selection & Wheatstone-bridge integration  
+- CAD and FEM refinement  
+- Materials and safety-factor validation  
+- Strain-gauge selection and instrumentation  
 
-The final design satisfies all structural performance requirements **and exceeds the required sensitivity**, producing **more than a 2× improvement** over the baseline geometry.
+The final design meets all structural performance requirements **and exceeds the sensitivity target**, improving the baseline design by **more than a factor of two**.
 
 ---
