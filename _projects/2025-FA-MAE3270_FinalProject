@@ -6,31 +6,33 @@ technologies: [Fusion 360, ANSYS, MATLAB, Strain Gauges]
 image: /assets/images/torque-wrench-cover.png
 ---
 
-<h2>Project Overview</h2>
+## Project Overview
 
-This project involved designing an **instrumented 3/8-inch drive torque wrench** rated for  
-**600 in·lbf**, integrating analytical calculations, CAD modeling, strain-gauge placement,  
+This project involved designing an instrumented 3/8-inch drive torque wrench rated for  
+600 in·lbf, integrating analytical calculations, CAD modeling, strain-gauge placement,  
 and ANSYS finite-element validation.
 
 The wrench needed to meet:
 
-- Sensitivity requirement of **≥ 1.0 mV/V**  
-- Yield/brittle failure factor of safety: **X₀ ≥ 4**  
-- Crack-growth safety factor: **Xₖ ≥ 2**  
-- Fatigue safety factor: **Xₛ ≥ 1.5**  
-- Compatibility with standard bonded foil gauges  
-- Manufacturability and repeatable strain fields  
+- Sensitivity requirement of ≥ 1.0 mV/V  
+- Yield/brittle failure safety factor X₀ ≥ 4  
+- Crack-growth safety factor Xₖ ≥ 2  
+- Fatigue safety factor Xₛ ≥ 1.5  
+- Compatibility with standard bonded foil strain gauges  
+- Manufacturability with consistent strain fields  
 
 ---
 
-<h2>Baseline Analysis</h2>
+## Baseline Analysis
 
-Using assigned dimensions, the baseline design produced:
+Using the assigned baseline dimensions, the following performance metrics were obtained:
 
-- **Deflection (load point):** 0.091 in  
-- **Max bending stress:** 12.8 ksi  
-- **Strain at gauge:** 375 µε  
-- **Estimated output:** 0.38 mV/V (half-bridge)
+- Deflection at the load point: 0.091 in  
+- Maximum bending stress: 12.8 ksi  
+- Strain at gauge: 375 µε  
+- Estimated output for a half-bridge: 0.38 mV/V  
+
+### Baseline Safety Factors
 
 <table>
 <thead>
@@ -43,49 +45,51 @@ Using assigned dimensions, the baseline design produced:
 </tbody>
 </table>
 
-The baseline design was structurally sound but **did not meet the sensitivity requirement**, motivating a redesign.
+Although structurally adequate, the baseline design did not meet the required sensitivity threshold and therefore required redesign.
 
 ---
 
-<h2>Improved Final Design</h2>
+## Improved Final Design
 
-Design adjustments focused on:
+The redesigned geometry incorporated:
 
-- Increasing measurable strain at the gauge  
-- Introducing a controlled reduced section  
-- Maintaining yield, fatigue, and fracture safety margins  
-- Creating flat gauge-mount surfaces  
+- A reduced cross-section to increase measurable strain  
+- Flat, accessible surfaces for gauge bonding  
+- Maintenance of yield, fatigue, and fracture safety factors  
+- Geometric refinement based on FEM strain-field validation  
 
 <div align="center">
-<img src="{{ '/assets/images/torque-wrench-cover.png' | relative_url }}" alt="CAD geometry" style="max-width:90%; border-radius:8px;">
+<img src="{{ '/assets/images/torque-wrench-cover.png' | relative_url }}"
+     alt="CAD geometry"
+     style="max-width:90%; border-radius:8px;">
 <p><em>Final CAD geometry modeled in Fusion 360.</em></p>
 </div>
 
 ---
 
-<h2>Material Selection</h2>
+## Material Selection
 
-The selected alloy:
+The selected alloy was:
 
-**Aluminum 7475-T7651**
+### Aluminum 7475-T7651
 
 - Young’s Modulus: 10 × 10⁶ psi  
 - Poisson Ratio: 0.29  
 - Ultimate Strength: ~65 ksi  
-- Fracture Toughness: ~46 ksi√in  
+- Fracture Toughness (K<sub>IC</sub>): ~46 ksi√in  
 
-This material offers favorable fatigue resistance and ductility while supporting a narrower reduced section for strain amplification.
+This material provided favorable fatigue resistance and toughness while enabling a narrower reduced section for controlled strain amplification.
 
 ---
 
-<h2>Finite Element Analysis (ANSYS)</h2>
+## Finite Element Analysis (ANSYS)
 
-**Boundary Conditions**
+### Boundary Conditions
 
-- Drive end constrained over top 0.40 in  
-- Applied torsional moment equivalent to **600 in·lbf**  
+- Drive end fully constrained over the upper 0.40 in  
+- Applied torsional loading equivalent to 600 in·lbf  
 
-### FEM Outputs
+### FEM Results
 
 <table>
 <thead>
@@ -99,34 +103,38 @@ This material offers favorable fatigue resistance and ductility while supporting
 </table>
 
 <div align="center">
-<img src="{{ '/assets/images/Normal-Strain-Contours.png' | relative_url }}" alt="Strain contours" style="max-width:90%; border-radius:8px;">
-<p><em>Normal strain contours showing amplification at the reduced section.</em></p>
+<img src="{{ '/assets/images/Normal-Strain-Contours.png' | relative_url }}"
+     alt="Strain contours"
+     style="max-width:90%; border-radius:8px;">
+<p><em>Normal strain contours showing strain amplification at the reduced section.</em></p>
 </div>
 
 ---
 
-<h2>Sensitivity Prediction (mV/V)</h2>
+## Sensitivity Prediction (mV/V)
 
-A half-bridge Wheatstone output was estimated using:
+Using a half-bridge Wheatstone configuration, the estimated output was computed as:
 
 <div style="background:#f6f8fa; padding:12px; border-radius:6px;">
-Approximate output:  
-<br>Vout/Vin ≈ (Gauge Factor × 2 × Strain) / 4  
+V<sub>out</sub> / V<sub>in</sub> ≈ (Gauge Factor × 2 × Strain) / 4  
 <br>Using GF ≈ 2.05 and ε ≈ 1.055 × 10⁻³  
 </div>
 
-**Final Sensitivity:**  
-➡ **≥ 1.0 mV/V at 600 in·lbf** (requirement satisfied)
+### Final Sensitivity  
+≥ 1.0 mV/V at 600 in·lbf  
+This satisfies the project requirement.
 
 ---
 
-<h2>Strain Gauge Selection</h2>
+## Strain Gauge Selection
 
 **Selected Gauge:** Vishay EA-06-125BZ-350  
-**Type:** Linear foil gauge, 350 Ω, GF ≈ 2.05  
+**Type:** Linear foil strain gauge, 350 Ω, Gauge Factor ≈ 2.05  
 
 <table>
-<thead><tr><th>Gauge Parameter</th><th>Value</th></tr></thead>
+<thead>
+<tr><th>Gauge Parameter</th><th>Value</th></tr>
+</thead>
 <tbody>
 <tr><td>Grid Length</td><td>3.18 mm</td></tr>
 <tr><td>Grid Width</td><td>1.57 mm</td></tr>
@@ -134,17 +142,17 @@ Approximate output:
 </tbody>
 </table>
 
-This gauge fits the redesigned mounting surface and matches the FEM-predicted strain levels.
+This gauge was selected based on compatibility with the redesigned mounting surface and the predicted FEM strain distribution.
 
 ---
 
-<h2>Conclusion</h2>
+## Conclusion
 
 The final torque-wrench configuration:
 
-- Meets all structural and fatigue criteria  
-- Achieves **over twice the sensitivity** of the baseline design  
-- Provides clean strain fields for half-bridge measurement  
-- Integrates CAD, materials, strain-gauges, and FEM into a cohesive design process  
+- Meets all structural, fatigue, and fracture safety criteria  
+- Achieves more than double the baseline sensitivity  
+- Produces well-defined strain fields for half-bridge instrumentation  
+- Integrates CAD, materials engineering, strain-gauge application, and FEM validation into a unified design workflow  
 
 ---
