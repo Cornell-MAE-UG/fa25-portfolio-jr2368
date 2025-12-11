@@ -103,7 +103,13 @@ This alloy supports the higher strain concentration at the reduced section while
 
 - Drive end constrained along upper 0.40 in  
 - Applied torque of 600 in·lbf at the handle  
-
+<div align="center" class="mb-4">
+  <img src="{{ '/assets/images/bound_cond.png' | relative_url }}"
+       alt="Boundary condition diagram showing fixed support and applied torque load"
+       class="img-fluid rounded shadow-sm"
+       style="max-width: 90%; height: auto;">
+  <p><em>ANSYS boundary-condition setup showing the fixed drive end and the applied load used to generate a 600 in·lbf torque.</em></p>
+</div>
 ### FEM Results Summary
 
 <table>
