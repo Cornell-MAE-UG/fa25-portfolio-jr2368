@@ -58,8 +58,12 @@ The redesigned geometry focuses on:
 - Providing flat, accessible regions for strain-gauge bonding  
 - Ensuring that strain gradients near the gauges remain smooth and well-behaved  
 
-<div align="center">
-  <img src="{{ '/assets/images/torque-wrench-cad.png' | relative_url }}"
+<div align="left">
+  <img src="{{ '/assets/images/torque-wrench-cover.png' | relative_url }}"
+       alt="Improved torque wrench CAD geometry"
+       style="max-width:90%; border-radius:8px;">
+<div align="right">
+  <img src="{{ '/assets/images/cad-full-model.png' | relative_url }}"
        alt="Improved torque wrench CAD geometry"
        style="max-width:90%; border-radius:8px;">
   <p><em>Fusion 360 CAD model of the improved torque wrench with reduced section.</em></p>
@@ -107,7 +111,7 @@ These results confirm that the reduced section increases strain at the gauge loc
 ### Total Deformation
 
 <div align="center">
-  <img src="{{ '/assets/images/torque-wrench-deformation.png' | relative_url }}"
+  <img src="{{ '/assets/images/deformation-ansys.png' | relative_url }}"
        alt="Total deformation from ANSYS"
        style="max-width:95%; border-radius:8px;">
   <p><em>Total deformation field under the 600 in·lbf torque load.</em></p>
@@ -118,7 +122,7 @@ These results confirm that the reduced section increases strain at the gauge loc
 ### Maximum Principal Stress
 
 <div align="center">
-  <img src="{{ '/assets/images/torque-wrench-max-principal-stress.png' | relative_url }}"
+  <img src="{{ '/assets/images/max-principal-stress.png' | relative_url }}"
        alt="Maximum principal stress contour"
        style="max-width:95%; border-radius:8px;">
   <p><em>Maximum principal stress contours concentrated near the drive and reduced section.</em></p>
