@@ -1,43 +1,193 @@
 ---
 layout: project
-title: "Aircraft Pitch Controller"
-description: "Simulink-Based PID Controller Design for Boeing 747 Pitch Dynamics"
-technologies: [MATLAB, Simulink, Control Theory, State-Space Modeling]
-image: /assets/images/aircraft-flight-control.png
+title: MAE 3260 – Aircraft Pitch Controller Design
+description: State-space modeling, transfer-function development, and PID controller implementation for a Boeing-class aircraft
+technologies: [MATLAB, Simulink, Control Theory, State-Space Modeling, PID Control]
+image: /assets/images/pitch-controller-cover.png
 ---
 
-# Aircraft Pitch Controller
+<div class="section">
 
-For my System Dynamics course (MAE 3260), I collaborated with Nicholas Schneider, Kat Volkova, and Lea Staller to develop a pitch-control system for a Boeing 747-400. The objective was to design, model, and tune a closed-loop controller capable of regulating aircraft pitch angle under varying dynamic conditions.
+<h2>Project Overview</h2>
 
-## Project Overview
+<p>
+This project analyzes and controls the pitch dynamics of a Boeing 747-400 using state-space modeling, transfer-function development, and closed-loop PID control. The objective was to create a controller capable of achieving high-fidelity pitch tracking with strict performance constraints, modeling aerodynamic forces, stability derivatives, and actuator behavior. The work draws extensively from aircraft performance data and the University of Michigan Aircraft Pitch Control framework <em>(report reference, page 1)</em> :contentReference[oaicite:0]{index=0}.
+</p>
 
-Our approach combined **state-space modeling**, **PID-based feedback control**, and **disturbance rejection**. The model incorporated:
+<p>
+The system is modeled using aerodynamic coefficients, geometric parameters, and environmental conditions at cruise altitude. The controller was designed to meet the following operational performance requirements:
+</p>
 
-- Longitudinal aircraft equations of motion  
-- Trimmed linearized state-space dynamics  
-- A PID controller tuned for stability and responsiveness  
-- Simulation of step inputs and atmospheric disturbances  
+<ul>
+<li>Overshoot less than 10%</li>
+<li>Rise time less than 2 seconds</li>
+<li>Settling time less than 10 seconds</li>
+<li>Steady-state error less than 2%</li>
+</ul>
 
-Below is the Simulink model used in our controller architecture:
+</div>
 
-![Aircraft Flight Control Model](/assets/images/aircraft-flight-control.png)
 
-## Key Engineering Tasks
 
-- **Deriving longitudinal state-space equations**  
-- **Constructing a Simulink control architecture**  
-- **Tuning PID gains for rise time, overshoot, settling time, and steady-state error**  
-- **Testing robustness using disturbance inputs**  
-- **Evaluating pitch response performance metrics**  
+<div class="section">
 
-## Results Summary
+<h2>Aircraft Model and System Parameters</h2>
 
-Through iterative tuning, we attained:
+<p>
+To construct the pitch-dynamics model, the team selected a Boeing 747-400 due to the availability of detailed aerodynamic and geometric specifications <em>(page 2)</em> :contentReference[oaicite:1]{index=1}.
+</p>
 
-- Rise time within acceptable performance bounds  
-- Minimal overshoot to preserve pitch stability  
-- Fast settling time for disturbance rejection  
-- Near-zero steady-state error  
+<h4>Key Parameters</h4>
 
-This project strengthened my understanding of **feedback control**, **dynamic stability**, **modeling and simulation**, and **real-world aerospace control systems**.
+<ul>
+<li>Mass: 300,000 kg</li>
+<li>Planform area: 541.16 m²</li>
+<li>Wingspan: 59.63 m</li>
+<li>Mean aerodynamic chord: 8.15 m</li>
+<li>Pitch inertia \( I_{yy} \): 4.49×10⁷ kg·m²</li>
+<li>Cruise speed: 250 m/s</li>
+<li>Air density at 35,000 ft: 0.371 kg/m³</li>
+</ul>
+
+<p>
+Lift and drag coefficients were computed assuming a constant lift coefficient and Oswald efficiency factor (e = 0.7). These values were used to calculate induced drag and the stability derivatives necessary for system development <em>(page 2–3)</em> :contentReference[oaicite:2]{index=2}.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>System Modeling and Differential Equations</h2>
+
+<p>
+Using the aerodynamic relationships and performance constants, the UMich pitch-control ODEs were populated with numerical values. This produced the following system <em>(page 4)</em>:
+</p>
+
+<div class="eq-block">
+α' = −0.0426 α − 0.1781 q + 0.232 δ<br>
+q' = −0.09993 α − 0.1999 q + 0.0203 δ<br>
+θ' = 61.35 q
+</div>
+
+<p>
+These equations form the foundation for both transfer-function development and state-space representation.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Transfer Function Development</h2>
+
+<p>
+Applying Laplace transforms yields the relationships among α(s), q(s), θ(s), and the input δ(s). After algebraic manipulation, the pitch transfer function becomes <em>(page 5)</em>:
+</p>
+
+<div class="eq-block">
+P(s) = Θ(s) / Δ(s) = (1.245s − 1.37) / (s³ + 0.2425s² − 0.00928s)
+</div>
+
+<p>
+This function characterizes how elevator deflection produces rotational pitch motion.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>State-Space Model</h2>
+
+<p>
+From the differential equations, the following state-space matrices were derived <em>(page 6)</em>:
+</p>
+
+<div class="eq-block">
+A = [ −0.0426  −0.1781   0<br>
+      −0.09993 −0.1999   0<br>
+       0        61.35    0 ]<br><br>
+
+B = [ 0.232 ; 0.0203 ; 0 ]<br><br>
+
+C = [ 1 0 0 ; 0 1 0 ; 0 0 1 ]<br><br>
+
+D = [ 0 ; 0 ; 0 ]
+</div>
+
+<p>
+These matrices were implemented in Simulink for dynamic simulation.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Open-Loop System Behavior</h2>
+
+<p>
+Before introducing feedback control, the aircraft pitch model behaved as an under-damped, drifting system. As seen in the initial simulation results <em>(page 8)</em>, the pitch angle rises briefly due to the command input but then decays and stabilizes at an incorrect angle due to inadequate natural damping and the absence of corrective action.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Controller Design and PID Tuning</h2>
+
+<p>
+A PID controller was added to regulate pitch using elevator deflection. Tuning was performed using Simulink’s built-in auto-tuning tools and manual refinement. The controller achieved all design goals:
+</p>
+
+<ul>
+<li>Rise time: ≈ 1.2 seconds</li>
+<li>Overshoot: < 10%</li>
+<li>Settling time: 7–8 seconds</li>
+<li>Steady-state error: < 2%</li>
+</ul>
+
+<p>
+The tuned system shows significantly improved dynamic response. The pitch angle closely follows the command reference, stabilizing well within the required timeframe <em>(page 8)</em>.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Closed-Loop Response</h2>
+
+<p>
+With the PID controller applied, the aircraft exhibits a smooth, well-damped response <em>(page 9)</em>. Elevator deflection (δ) shows a strong initial correction followed by minor adjustments as the aircraft settles into its commanded pitch angle.
+</p>
+
+<p>
+This confirms that the selected controller architecture and tuning methodology are appropriate for achieving both transient and steady-state performance expectations for aircraft pitch control.
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Download Full Report</h2>
+
+<p>
+The complete technical report—including derivations, MATLAB code, and Simulink diagrams—is available for download below.
+</p>
+
+<a class="btn btn-primary" href="/assets/reports/MAE3260_FinalGroupReport.pdf" download>
+    Download Report (PDF)
+</a>
+
+</div>
