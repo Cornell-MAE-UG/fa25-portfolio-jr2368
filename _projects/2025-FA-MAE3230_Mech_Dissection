@@ -6,225 +6,144 @@ technologies: [Fluid Mechanics, Turbomachinery, Centrifugal Fans, Internal Flow,
 image: /assets/images/br7800.jpeg
 ---
 
-<div class="section">
-
-<h2>Project Overview</h2>
-
-<p>
-This project presents a fluid-mechanical dissection and qualitative analysis of the
-<strong>Stihl BR 700 backpack leaf blower</strong>, a high-performance handheld air-moving device.
-The objective was to physically dismantle the system, document its internal components,
-and analyze how its geometry and configuration govern airflow generation, acceleration,
-and discharge.
-</p>
-
-<p>
-The dissection was performed to reinforce core concepts from fluid mechanics, including
-conservation laws, internal flow behavior, turbomachinery fundamentals, and loss mechanisms
-in real-world devices.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Device Selection and Relevance to Fluid Mechanics</h2>
-
-<p>
-The Stihl BR 700 was selected because it functions as a compact centrifugal flow machine,
-combining rotating machinery, confined internal flow passages, and high-Reynolds-number
-airflow. The device provides a clear physical example of how mechanical energy is transferred
-to a fluid to produce useful momentum and pressure rise.
-</p>
-
-<p>
-Key fluid-mechanical phenomena exhibited by the device include:
-</p>
-
-<ul>
-  <li>Energy transfer from a rotating impeller to airflow</li>
-  <li>Radial-to-axial flow redirection</li>
-  <li>Internal losses due to friction and turbulence</li>
-  <li>Jet formation at the discharge nozzle</li>
-</ul>
-
-</div>
-
-
-<div class="section">
-
-<h2>Mechanical Dissection Procedure</h2>
-
-<p>
-The leaf blower was fully dismantled using standard hand tools, following safe mechanical
-disassembly practices. Components were removed in a systematic sequence to preserve
-structural integrity and allow clear observation of internal flow features.
-</p>
-
-<p>
-Throughout the process, particular attention was paid to components that directly influence
-fluid motion, including the intake housing, centrifugal fan, volute casing, and outlet ducting.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Mechanical Dissection Video</h2>
-
-<p>
-The following video documents the complete mechanical dissection process and highlights
-key components relevant to fluid mechanics:
-</p>
-
-<div align="center" class="mb-4">
-  <iframe width="900" height="506"
-    src="https://www.youtube.com/embed/unX1lBOMrD0"
-    title="Fluid Mechanical Dissection of the Stihl BR 700 Leaf Blower"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<p>
-The video provides visual context for component geometry, flow pathways, and design features
-that are difficult to fully capture through static images alone.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Identification of Key Flow Components</h2>
-
-<p>
-The primary flow-influencing components identified during the dissection include:
-</p>
-
-<ul>
-  <li><strong>Inlet Section:</strong> Draws ambient air into the blower with minimal pressure loss</li>
-  <li><strong>Centrifugal Impeller:</strong> Transfers mechanical energy to the air, increasing velocity and pressure</li>
-  <li><strong>Volute Housing:</strong> Converts kinetic energy into static pressure while guiding flow circumferentially</li>
-  <li><strong>Outlet Ducting and Nozzle:</strong> Accelerates and directs airflow into a high-speed jet</li>
-</ul>
-
-<p>
-The geometry of the impeller blades and volute directly controls flow acceleration,
-pressure rise, and efficiency.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Flow Pathway Analysis</h2>
-
-<p>
-Air enters axially through the intake and is redirected radially outward by the rotating
-impeller. As the air moves through the volute, its velocity is partially converted into
-pressure before being redirected toward the outlet duct.
-</p>
-
-<p>
-Potential regions of flow separation and recirculation were observed near sharp turns
-and sudden cross-sectional changes, particularly within the volute and outlet transition.
-These regions contribute to aerodynamic losses and reduced efficiency.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Application of Fluid Mechanical Principles</h2>
-
-<p>
-The blower operation can be explained using fundamental conservation principles:
-</p>
-
-<ul>
-  <li><strong>Conservation of Mass:</strong> Continuity applies throughout the internal flow passages</li>
-  <li><strong>Conservation of Momentum:</strong> The impeller imparts momentum to the air, generating thrust</li>
-  <li><strong>Conservation of Energy:</strong> Mechanical shaft work is converted into fluid kinetic and pressure energy</li>
-</ul>
-
-<p>
-The airflow operates at high Reynolds numbers, indicating fully turbulent internal flow.
-Losses due to boundary layers, turbulence, and secondary flows play a significant role
-in overall performance.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Losses and Efficiency Considerations</h2>
-
-<p>
-Major sources of loss identified include:
-</p>
-
-<ul>
-  <li>Frictional losses along internal walls</li>
-  <li>Turbulent dissipation within the volute</li>
-  <li>Flow separation at sharp geometric transitions</li>
-</ul>
-
-<p>
-These losses reduce the fraction of mechanical energy converted into useful airflow.
-Design features such as smooth curvature and gradual area changes are critical for
-maintaining efficiency.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Safety and Procedural Considerations</h2>
-
-<p>
-All disassembly steps were conducted with the device powered off, cooled, and free of fuel.
-Personal protective equipment was used to mitigate risks associated with sharp edges and
-stored mechanical energy.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Reflection on Fluid Mechanical Phenomena</h2>
-
-<p>
-This dissection reinforced the relationship between mechanical design and fluid behavior.
-Observing internal components firsthand provided clarity on how theoretical concepts
-translate into practical engineering solutions.
-</p>
-
-<p>
-The project highlighted discrepancies between idealized flow assumptions and real-world
-performance, particularly regarding losses and non-uniform flow structures.
-</p>
-
-</div>
-
-
-<div class="section">
-
-<h2>Conclusion</h2>
-
-<p>
-The fluid mechanical dissection of the Stihl BR 700 demonstrated how centrifugal machinery,
-internal flow passages, and geometric design collectively govern airflow generation.
-This project strengthened practical understanding of turbomachinery and internal flow
-mechanics beyond what is achievable through theory alone.
-</p>
-
-</div>
+<section class="section">
+  <h2>Project Overview</h2>
+
+  <p>
+    This project documents a fluid mechanical dissection of the Stihl BR 700 leaf blower, treated as a compact
+    turbomachinery system in which chemical energy is converted into shaft work and ultimately into airflow
+    momentum and pressure rise. The assignment required a hands-on teardown, identification of key flow components,
+    and an engineering interpretation of how geometry, losses, and operating conditions influence performance.
+  </p>
+
+  <p>
+    The dissection video is embedded below and serves as the primary visual record of the teardown process and
+    component-level observations.
+  </p>
+
+  <div style="margin-top: 1rem;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+      <iframe
+        src="https://www.youtube.com/embed/unX1lBOMrD0"
+        title="Fluid Mechanical Dissection – Stihl BR 700"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p style="margin-top: 0.5rem;">
+      <em>Mechanical dissection video documenting component removal and flow-path discussion.</em>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Selection and Overview of the Device</h2>
+
+  <p>
+    The Stihl BR 700 was selected because it clearly exhibits fluid mechanical behavior associated with fans and
+    internal flow devices: an inlet region, an impeller-driven pressure rise, a volute for flow collection and
+    pressure recovery, and an outlet/nozzle region where momentum is delivered to the environment. Its compact size,
+    accessible housing, and well-defined flow path make it appropriate for a component-level dissection.
+  </p>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.75rem;">Functional Objective</h3>
+  <p>
+    The primary function is to generate a high-velocity air jet. From a fluid mechanics perspective, the objective is
+    to increase the fluid’s mechanical energy (pressure and kinetic energy) through rotating machinery and then
+    discharge that energy as momentum.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Detailed Dissection and Analysis</h2>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.25rem;">Physical Disassembly</h3>
+  <p>
+    The device was dismantled to expose the flow-generating and flow-guiding components. The teardown focused on
+    revealing how the blower’s geometry supports stable intake, efficient pressure rise, and controlled discharge.
+    Observations during disassembly were used to infer likely regions of separation, mixing, and loss generation.
+  </p>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.75rem;">Key Flow Components</h3>
+  <ul>
+    <li><strong>Inlet/Intake Path:</strong> establishes the incoming flow conditions and influences inlet losses.</li>
+    <li><strong>Impeller/Fan Stage:</strong> adds energy to the flow through rotating blades and induced swirl.</li>
+    <li><strong>Volute:</strong> collects flow from the impeller and converts swirl/velocity into pressure rise.</li>
+    <li><strong>Outlet/Nozzle Region:</strong> conditions the flow for discharge and determines delivered momentum.</li>
+  </ul>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.75rem;">Flow Pathway Analysis</h3>
+  <p>
+    The primary flow pathway begins at the inlet, accelerates through the impeller, and transitions into the volute
+    where pressure recovery and mixing occur before discharge. Geometric transitions and curvature suggest potential
+    regions of boundary-layer growth, secondary flow, and localized separation—particularly at abrupt area changes and
+    tight turns.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Application of Fluid Mechanical Principles</h2>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.25rem;">Governing Concepts</h3>
+  <ul>
+    <li><strong>Conservation of mass:</strong> continuity across inlet, impeller, volute, and discharge sections.</li>
+    <li><strong>Conservation of momentum:</strong> relationship between discharge jet and delivered thrust/momentum.</li>
+    <li><strong>Energy transfer:</strong> mechanical energy addition via rotating blades and pressure recovery in the volute.</li>
+  </ul>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.75rem;">Non-Dimensional Context</h3>
+  <p>
+    While exact operating conditions vary with throttle setting and loading, the blower operates in a regime where
+    inertial effects dominate and the internal flow is expected to be turbulent. In that context, Reynolds number,
+    pressure/flow coefficients, and loss coefficients are the appropriate tools for interpreting performance trends
+    and efficiency limitations.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Losses, Efficiency, and Design Assessment</h2>
+
+  <p>
+    The primary performance penalties in a compact blower system are expected to arise from inlet losses,
+    blade passage losses, mixing losses in the volute, and discharge losses due to non-uniform velocity profiles and
+    turbulence. Additional losses occur through leakage paths, surface roughness, and unsteady interaction between the
+    impeller outflow and the volute collection region.
+  </p>
+
+  <h3 style="font-size: 1.05rem; margin-top: 0.75rem;">Potential Design Improvements</h3>
+  <ul>
+    <li>Smoother geometric transitions to reduce separation and secondary-flow formation.</li>
+    <li>Volute refinement to improve pressure recovery and reduce circumferential non-uniformity.</li>
+    <li>Outlet conditioning to reduce swirl and improve jet uniformity at discharge.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Safety and Procedural Controls</h2>
+
+  <p>
+    Disassembly was performed with the device powered off and stabilized, with attention to sharp edges, fastener
+    control, and safe handling of engine and fuel-system components. Component removal was sequenced to prevent
+    damage to mating surfaces and to ensure the flow-path geometry could be documented accurately.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Contribution Summary</h2>
+
+  <p>
+    My contributions to the group project spanned both hands-on disassembly and technical communication:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Mechanical teardown:</strong> I helped disassemble the <strong>volute</strong>, <strong>engine</strong>, and
+      <strong>carburetor</strong>, focusing on how each subsystem supports airflow generation, pressure rise, and overall performance.
+    </li>
+    <li>
+      <strong>Presentation Contributions:</strong> I introduced the product and provided an overview of the fluid mechanical
+      concepts addressed in the video, framing the device as a compact turbomachinery system governed by conservation laws and loss mechanisms.
+    </li>
+  </ul>
+</section>
