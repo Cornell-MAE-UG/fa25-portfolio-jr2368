@@ -9,7 +9,11 @@ description: "Thermal resistance networks and fin analysis."
 
 Selected homework assignment: **Problem Set 4 – Heat Transfer**
 
-[Download Problem Set 4 PDF](/assets/images/MAE3240_HW4.pdf)
+<a class="btn btn-primary"
+   href="{{ '/assets/MAE3240_HW4.pdf' | relative_url }}"
+   download>
+    Download Report (PDF)
+</a>
 
 ---
 
