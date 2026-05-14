@@ -3,7 +3,7 @@ layout: project
 title: Cube Craze Autonomous Robot Competition
 description: Design, fabrication, and competition execution of an Arduino-based autonomous cube-collecting robot
 technologies: [Mechatronics, Robotics, Arduino, Embedded Systems, Mechanical Design, Prototyping]
-image: /assets/images/cube-craze-robot.jpg
+image: /assets/images/crazycuberobot.png
 ---
 
 <section class="section">
