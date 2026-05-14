@@ -23,7 +23,7 @@ image: /assets/images/crazycuberobot.png
   </p>
 
   <p>
-    <a href="/assets/files/MAE3780-Competition-Final-Report.pdf">View Final Report</a>
+    <a href="/assets/images/MAE3780-Competition-Final-Report.pdf">View Final Report</a>
   </p>
 </section>
 
